@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+}
+
+.left {
+    width: 37vw;
+    height: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 55%;
+}
+
+.right {
+    background-color: rgb(245, 250, 254);
+    --left-margin: 60px;
+    display: flex;
+    flex-direction: column;
+  
+/* only specifying width of .left makes it so that the image disappears in a narrow enough viewport. Also prevents input boxes from overflowing to the side */
+/*      width: 63vw; */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 100px;
+  margin-top: 250px;
+  background: rgba(0,0,0,0.6); /* using opacity: 0.5 also affects text and img*/
+}
+
+img {
+  width: 6rem;
+}
+
+.logo > p {
+  color: white;
+  font-family: 'Lora', serif;
+  font-size: 6rem;
+}
+ 
+
+.paragraphs {
+  /* Adding this right padding cahnges the width of the image on the left. Does it have precedence over the image width, which is set to 37wv? */
+  
+    padding-right: 470px;
+  
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding-top: 200px;
+    padding-bottom: 100px;
+}
+
+.paragraphs > p:first-child {
+
+    margin-bottom: 40px;
+    margin-right: 50px;
+}
+
+form {
+    position: relative;
+    background-color: white;
+    padding: 40px 0px;
+    box-shadow: 0 4px 2px -2px gray;
+    
+/*     specifying height makes input boxes overflow out of the form box in small viewports */
+/*     height: 20vh; */
+}
+
+form > p {
+    font-weight: 500;
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+}
+
+label {
+    font-size: 0.7rem;
+    letter-spacing: 0.05rem;
+    margin-bottom: 2px;
+}
+
+
+input, button{
+    -webkit-appearance: none;
+    appearance: none;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 1rem;
+  }
+
+input {
+    padding: 5px;
+    width : 250px;
+    border: 1px solid #E5E7EB;
+    border-radius: 4px;
+}
+
+input:focus, button {
+  box-shadow: 3px 3px 11px -2px #7e7e7e
+  
+}
+
+.fields-and-labels {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+ul {
+    display: flex;
+    gap: 70px;
+    
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    position: absolute;
+    bottom: -80px;
+    left: var(--left-margin);
+    color: white;
+    background-color: #596D48;
+    border: 1px solid #596D48;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    padding: 10px 25px;
+}
+
+/* Applies to entire right side */
+
+ul, p {
+    margin-left: var(--left-margin);
+}
+
+span {
+    font-style: italic;
+}
+
+.submission {
+  margin-top: 120px;
+}
+
+a {
+  color: #596D48;
+  font-weight: 500;
+}
+
+.error {
+  border: 1px solid red;
+}
+
+.error + span {
+  position: relative;
+}
+
+#password + span::before {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  content: "* Passwords do not match";
+  font-size: 0.6rem;
+  color: red;
+  font-style: normal;
+}

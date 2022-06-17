@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="left">
+        <div class="logo">
+          <img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png">
+          <p>ODIN<p>
+        </div>
+      </div>
+      
+      <div class="right">
+      
+        <div class="paragraphs">
+          <p>
+            This is not a real online service! You know you need something 
+            like this in your life to help you realize your deepest 
+            dreams. Sign up <span>now</span> to get started.
+          </p>
+      
+          <p>You <span>know</span> you want to.</p>
+        </div>
+      
+        <form method="post">
+          <p> Let's do this!</p>
+          <div class="fields-and-labels">
+            <ul>
+              <li>
+                <label for="f_name">FIRST NAME</label>
+                <input type="text" id="f_name" name="f_name">
+              </li>
+      
+              <li>
+                <label for="l_name">LAST NAME</label>
+                <input type="text" id="l_name" name="l_name">
+              </li>
+            </ul>
+      
+            <ul>
+              <li>
+                <label for="email">EMAIL</label>
+                <input type="email" id="email" name="email">
+              </li>
+      
+              <li>
+                <label for="phone_number">PHONE NUMBER</label>
+                <input type="tel" id="phone_number" name="phone_number">
+              </li>
+            </ul>
+      
+            <ul>
+              <li>
+                <label for="password">PASSWORD</label>
+                <input type="password" id="password" name="password" class="error">
+                <span></span>
+              </li>
+      
+              <li>
+                <label for="confirm"> CONFIRM PASSWORD</label>
+                <input type="password" id="confirm" name="confirm" class="error">
+                <span></span>
+              </li>
+            </ul>
+          </div>
+          <button type="submit"> Create Account</button>
+        </form>
+      
+        <div class="submission">
+          <p>Already have an account? <a>Log in</a></p>
+        </div>
+    </div>
+</body>
+</html>
